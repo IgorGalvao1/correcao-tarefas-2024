@@ -1,10 +1,11 @@
-@baseUrl = https://8080-marcoweb-correcaotarefa-uwe6kzwk6za.ws-us115.gitpod.io
-
+@baseUrl = https://8080-igorgalvao1-correcaotar-pj6nj554am5.ws-us115.gitpod.io
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVGFyZWZhcyIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzI1MzE0OTE0fQ.iVOYUQWcHXYddREy4a6yUKb5qNoNVHox35l7rwJcVnk
 ###
 GET {{baseUrl}}/tarefas
 
 ###
 POST {{baseUrl}}/tarefas
+Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
