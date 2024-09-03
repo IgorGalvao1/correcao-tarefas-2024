@@ -1,5 +1,5 @@
 @baseUrl = https://8080-igorgalvao1-correcaotar-pj6nj554am5.ws-us115.gitpod.io
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVGFyZWZhcyIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzI1MzE0OTE0fQ.iVOYUQWcHXYddREy4a6yUKb5qNoNVHox35l7rwJcVnk
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJBUEkgVGFyZWZhcyIsInN1YiI6InVzdWFyaW8iLCJleHAiOjE3MjU0MDE5MTV9.zqDVcv7fap0G4yr0jJIJwnbDMcKGQJ42AjJhbCqT9ZI
 ###
 GET {{baseUrl}}/tarefas
 

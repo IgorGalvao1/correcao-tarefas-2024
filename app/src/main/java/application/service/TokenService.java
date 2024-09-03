@@ -1,10 +1,10 @@
 package application.service;
 
-import org.springframework.beans.factory.annotation.Value;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.auth0.jwt.JWT;
@@ -16,7 +16,8 @@ import application.model.Usuario;
 
 @Service
 public class TokenService {
-    private String secret = "123456789";
+    @Value("${api.security.token.secret}")
+    private String secret;
 
     public String generateToken(Usuario usuario) {
         try {
@@ -35,11 +36,11 @@ public class TokenService {
         try {
             Algorithm algorithm = Algorithm.HMAC256(secret);
             return JWT.require(algorithm)
-            .withIssuer("API Tarefas")
-            .build()
-            .verify(tokenJWT)
-            .getSubject();
-        }catch (JWTVerificationException exception) {
+                .withIssuer("API Tarefas")
+                .build()
+                .verify(tokenJWT)
+                .getSubject();
+        } catch (JWTVerificationException exception) {
             throw new RuntimeException("Token Inválido ou Expirado");
         }
     }
